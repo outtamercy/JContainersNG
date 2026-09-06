@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+    <moduleName>JContainers NG</moduleName>
+    <installSteps>
+        <installStep name="Game Version Selection">
+            <optionalFileGroups>
+                <group name="Select Your Game Edition" type="SelectExactlyOne">
+                    <plugins>
+                        <plugin name="Skyrim Special Edition / Anniversary Edition">
+                            <description>Installs JContainers64.dll for Skyrim SE/AE (1.5.97, 1.6.x, and 1.7.x).</description>
+                            <files>
+                                <file source="SE/SKSE/Plugins/JContainers64.dll" destination="SKSE/Plugins/JContainers64.dll" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional" />
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Skyrim VR">
+                            <description>Installs JContainersVR.dll for Skyrim VR.</description>
+                            <files>
+                                <file source="VR/SKSE/Plugins/JContainersVR.dll" destination="SKSE/Plugins/JContainersVR.dll" priority="0" />
+                            </files>
+                            <typeDescriptor>
+                                <type name="Optional" />
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+            </optionalFileGroups>
+        </installStep>
+    </installSteps>
+</config>
